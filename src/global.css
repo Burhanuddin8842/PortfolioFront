@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Radley:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+
+.background {
+  /* background:
+    radial-gradient(
+      ellipse 60% 50% at 92% 8%,
+      rgba(59, 130, 246, 0.08) 0%,
+      rgba(30, 64, 175, 0.04) 30%,
+      transparent 60%
+    ),
+    #0a1220; */
+  /* background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1e3c72);
+  background-size: 400% 400%;
+  animation: royalFlow 60s ease infinite;
+  min-height: 100vh;
+   */
+  background: linear-gradient(270deg,
+  #05080f,
+  #0a1224,
+  #0d1b3d,
+  #08122b
+);
+background-size: 400% 400%;
+animation: velvetRoyal 14s ease infinite;
+  }
+
+  @keyframes velvetRoyal {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes royalFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.radley-regular {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.radley-regular-italic {
+  font-family: "Radley", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+/* .anim {
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes myAnimation {
+  from {
+    background: #a7cfdf;
+    background: radial-gradient(
+      circle farthest-side at left center,
+      #a7cfdf 0%,
+      #23538a 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background: #a7cfdf;
+    background: radial-gradient(
+      circle farthest-side at right center,
+      #a7cfdf 0%,
+      #23538a 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+} */
+.anim {
+  background: linear-gradient(
+    to right,
+    #f0f0f0 20%,
+    #c0c0c0 40%,
+    #ffffff 50%,
+    #c0c0c0 60%,
+    #f0f0f0 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 7s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
