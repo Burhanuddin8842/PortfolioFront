@@ -5,7 +5,7 @@ const Code = () => {
     <>
     <div className="flex  bg-gray-800 h-full w-full items-center justify-center">
 
-    <div className="h-[98%] w-[98%] overflow-scroll">
+    <div className="h-[98%] w-[98%]">
         {/* <code className="h-full w-full"></code> */}
         <div className="grid grid-cols-10 py-4">
             <div className="col-span-1 h-[20%] text-sm text-gray-500 flex items-center justify-end">1</div>

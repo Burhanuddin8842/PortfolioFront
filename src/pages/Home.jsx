@@ -10,28 +10,14 @@ import { IoMdClose } from "react-icons/io";
 import { FiMinimize2 } from "react-icons/fi";
 import { VscChromeMinimize } from "react-icons/vsc";
 import Code from "../Screens/Code";
+import Git from "../Screens/Git";
 const Home = () => {
-  let initscreen = {
-    git: false,
-    link: false,
-    fiverr: false,
-    freelancer: false,
-    upwork: false
-  }
+  
 
-  const reducer = (state, action) => {
-    if (action.type == "gitstart") {
-      console.log("github was hovered")
-      return{
-       git: true,
-    link: false,
-    fiverr: false,
-    freelancer: false,
-    upwork: false 
-      }
-    }
-  }
-  let [screen, dispatch] = useReducer(reducer, initscreen)
+  
+  // let [screen, dispatch] = useReducer(reducer, initscreen)
+  // screen = {git, link, fiverr, freelancer, upwork, code}
+  
 
   return (
     <div className='text-white min-h-[93vh] px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-8' id='home'>
@@ -67,7 +53,7 @@ const Home = () => {
 
       <div className="col-span-1">
         <div className="container border-white shadow-lg shadow-blue-100 w-full max-w-md lg:max-w-none mx-auto lg:mx-0 aspect-square rounded-md bg-black">
-          <div className="h-[80%]">
+          <div className="h-[100%]">
             <div className="min-h-[7%] backdrop-blur-[10px] bg-black">
               <div className="w-full flex gap-4 justify-start h-full">
                 <div className="flex items-center gap-3 h-full p-3">
@@ -83,26 +69,26 @@ const Home = () => {
               </div>
             </div>
             <div className="h-[93%]">
-              <Code />
+              < Code />
             </div>
           </div>
-          <div className="min-h-[20%] md:border-t-2 border-white p-4 grid grid-cols-4">
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer" onMouseEnter={() => dispatch({ type: "gitstart" })} onMouseLeave={()=>dispatch({type: "end"})}>
+          </div>
+          <div className="md:border-t-2 border-white p-4 grid grid-cols-3 mx-2 bg-white/30 backdrop-blur-lg rounded-md glass">
+          <a href="http://www.github.com/burhanuddin8842" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer" target="_blank" rel="noopener noreferrer">
+            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
               <BsGithub />
             </div>
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer" onMouseEnter={() => dispatch({ type: "linkstart" })} onMouseLeave={()=>dispatch({type: "end"})}>
+          </a>
+          <a href="https://www.linkedin.com/in/burhanuddin-aliasghar-1289a9379/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwjIyrcJeSGmjUAYnEVNhkA%3D%3D" target="_blank" rel="noopener noreferrer" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
+            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
               <AiFillLinkedin />
             </div>
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer" onMouseEnter={() => dispatch({ type: "fiverrstart" })} onMouseLeave={()=>dispatch({type: "end"})}>
+          </a>
+          <a href="https://www.fiverr.com/s/XLyqG05" target="_blank" rel="noopener noreferrer" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
+            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
               <SiFiverr />
             </div>
-            {/* <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
-              <SiFreelancer />
-            </div> */}
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
-              <TbBrandUpwork />
-            </div>
-          </div>
+          </a>
         </div>
       </div>
 
