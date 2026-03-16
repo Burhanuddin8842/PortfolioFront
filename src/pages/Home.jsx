@@ -1,94 +1,77 @@
-import { TbBrandUpwork } from "react-icons/tb";
-import { SiFreelancer } from "react-icons/si";
 import { SiFiverr } from "react-icons/si";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { HiDocumentDownload } from "react-icons/hi";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import React, { useReducer } from 'react'
-import { IoMdClose } from "react-icons/io";
-import { FiMinimize2 } from "react-icons/fi";
-import { VscChromeMinimize } from "react-icons/vsc";
+import React from 'react'
 import Code from "../Screens/Code";
-import Git from "../Screens/Git";
+
 const Home = () => {
-  
-
-  
-  // let [screen, dispatch] = useReducer(reducer, initscreen)
-  // screen = {git, link, fiverr, freelancer, upwork, code}
-  
-
   return (
-    <div className='text-white min-h-[93vh] px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-8' id='home'>
+    <div className='text-white min-h-screen px-4 py-6 lg:py-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 pt-[7vh]' id='home'>
       <div className="w-full max-w-2xl col-span-1">
-        {/* <h1 className="text-6xl font-bold leading-tight">
-          Hi, I'm Burhanuddin.<br />
-          I build full-stack<br />
-          <span className="bg-gradient-to-r from-white via-slate-400 to-slate-500 bg-clip-text text-transparent">
-            solutions.
-          </span>
-        </h1> */}
-        <h1 className="anim gard text-3xl lg:text-5xl font-bold comic-relief-bold">
-          Hi, I am <br />
-          <span className='text-4xl lg:text-7xl'>Burhanuddin.</span><br />
-          I build Full-Stack Solutions
+        {/* Main Heading with gradient */}
+        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
+          <span className="text-gray-400">Hi, I am</span> <br />
+          <span className="text-3xl sm:text-4xl lg:text-6xl bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent inline-block">
+            Burhanuddin.
+          </span><br />
+          <span className="text-gray-300">I build </span>
+          <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Full-Stack Solutions</span>
         </h1>
-        <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed font-light font-mono my-4">
-          Turning complex problems into elegant code. Specializing in the MERN stack to deliver scalable, high-performance web applications.
+
+        <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto md:mx-0 leading-relaxed mt-4">
+          <span className="text-gray-400">Turning complex problems into elegant code.</span> Specializing in the MERN stack to deliver scalable, high-performance web applications.
         </p>
 
-        <div className="mx-4 flex gap-4 items-center justify-start flex-wrap">
-          <button className="p-3 bg-blue-600 rounded-sm flex items-center gap-2 hover:shadow-blue-300 hover:scale-105 transition-all shadow-lg cursor-pointer active:scale-100 w-full lg:w-auto justify-center">
-            View Projects <AiOutlineArrowRight />
-          </button>
-          <a href="/Burhanuddin_Ali_Asghar_CV_ModernVariant.pdf" download className="w-full lg:w-auto">
-            <button className="p-3 bg-none border-white border-2 rounded-sm flex items-center gap-2 hover:shadow-blue-300 hover:scale-105 transition-all shadow-lg cursor-pointer active:scale-100 justify-center w-full lg:w-auto">
-              Get CV <HiDocumentDownload />
+        {/* CTA Buttons */}
+        <div className="flex gap-3 mt-6">
+          <a href="#projects">
+            <button className="group px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-lg flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:scale-105 cursor-pointer active:scale-95">
+              <span className="font-semibold text-sm">View Projects</span>
+              <AiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </a>
+          <a href="/Burhanuddin_Ali_Asghar_CV_ModernVariant.pdf" download>
+            <button className="group px-5 py-2.5 bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 rounded-lg flex items-center gap-2 transition-all duration-300 hover:scale-105 cursor-pointer active:scale-95">
+              <HiDocumentDownload className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+              <span className="font-medium text-sm">Get CV</span>
             </button>
           </a>
         </div>
       </div>
 
 
-      <div className="col-span-1">
-        <div className="container border-white shadow-lg shadow-blue-100 w-full max-w-md lg:max-w-none mx-auto lg:mx-0 aspect-square rounded-md bg-black">
-          <div className="h-[100%]">
-            <div className="min-h-[7%] backdrop-blur-[10px] bg-black">
-              <div className="w-full flex gap-4 justify-start h-full">
-                <div className="flex items-center gap-3 h-full p-3">
-                  <button className="text-xs text-black font-medium rounded-full p-1 cursor-pointer bg-red-600 flex items-center justify-center text-center">
-                    {/* <IoMdClose /> */}
-                  </button>
-                  <button className="text-xs text-black p-1 cursor-pointer font-medium rounded-full bg-yellow-500 flex items-center justify-center text-center">
-                    {/* <FiMinimize2 />                    </button> */}</button>
-                  <button className="text-xs text-black p-1 cursor-pointer font-medium rounded-full bg-green-600 flex items-center justify-center text-center">
-                    {/* <VscChromeMinimize /> */}
-                  </button>
-                </div>
-              </div>
+      <div className="col-span-1 w-full mt-6 lg:mt-0">
+        {/* Unified Code + Social Links Panel */}
+        <div className="container border border-white/10 shadow-2xl shadow-blue-900/10 w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto lg:mx-0 rounded-xl bg-gray-900/80 backdrop-blur-sm overflow-hidden flex flex-col">
+          {/* Code Window Header with traffic light buttons */}
+          <div className="min-h-[40px] sm:min-h-[50px] bg-gray-800/80 flex items-center justify-between px-3 sm:px-4 border-b border-white/5">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
             </div>
-            <div className="h-[93%]">
-              < Code />
-            </div>
+            <span className="text-xs text-gray-500 hidden sm:block">main.js</span>
           </div>
+
+          {/* Code Content */}
+          <div className="flex-1 min-h-[150px] sm:min-h-[200px] lg:min-h-[250px]">
+            <Code />
           </div>
-          <div className="md:border-t-2 border-white p-4 grid grid-cols-3 mx-2 bg-white/30 backdrop-blur-lg rounded-md glass">
-          <a href="http://www.github.com/burhanuddin8842" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer" target="_blank" rel="noopener noreferrer">
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
+
+          {/* Social Links - merged into the same panel */}
+          <div className="p-3 sm:p-4 grid grid-cols-3 border-t border-white/10 bg-gray-800/30">
+            <a href="http://www.github.com/burhanuddin8842" className="flex items-center justify-center text-2xl sm:text-3xl text-gray-500 hover:text-white cursor-pointer transition-all duration-300 hover:scale-110" target="_blank" rel="noopener noreferrer">
               <BsGithub />
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/burhanuddin-aliasghar-1289a9379/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwjIyrcJeSGmjUAYnEVNhkA%3D%3D" target="_blank" rel="noopener noreferrer" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
+            </a>
+            <a href="https://www.linkedin.com/in/burhanuddin-aliasghar-1289a9379/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-2xl sm:text-3xl text-gray-500 hover:text-white cursor-pointer transition-all duration-300 hover:scale-110">
               <AiFillLinkedin />
-            </div>
-          </a>
-          <a href="https://www.fiverr.com/s/XLyqG05" target="_blank" rel="noopener noreferrer" className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
-            <div className="col-span-1 flex items-center justify-center text-3xl hover:text-blue-700 cursor-pointer">
+            </a>
+            <a href="https://www.fiverr.com/s/XLyqG05" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-2xl sm:text-3xl text-gray-500 hover:text-white cursor-pointer transition-all duration-300 hover:scale-110">
               <SiFiverr />
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
 

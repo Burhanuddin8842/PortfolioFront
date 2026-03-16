@@ -1,3 +1,4 @@
+/* Google Fonts must be loaded after Tailwind */
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Radley:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
@@ -168,27 +169,34 @@ animation: velvetRoyal 14s ease infinite; */
 }
 
 @keyframes glowShift {
+  0% {
+    background-position: 0% 50%;
+  }
 
-  0% { background-position: 0% 50%; }
-
-  100% { background-position: 100% 50%; }
-
+  100% {
+    background-position: 100% 50%;
+  }
 }
-.glass{
+.glass {
   position: relative;
   overflow: hidden;
   .glassy-panel {
-  background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur effect to the background */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border-radius: 15px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow for depth */
-  padding: 20px; /* Adjust padding as needed */
-}
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.15
+    ); /* Slightly transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow for depth */
+    padding: 20px; /* Adjust padding as needed */
+  }
 }
 
-.glass::before{
+.glass::before {
   content: "";
   position: absolute;
 
@@ -206,11 +214,99 @@ animation: velvetRoyal 14s ease infinite; */
   animation: slide 5s linear infinite;
 }
 
-@keyframes slide{
-  from{
+@keyframes slide {
+  from {
     left: -60%;
   }
-  to{
+  to {
     left: 120%;
   }
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .glass::before {
+    width: 15%;
+    animation-duration: 3s;
+  }
+
+  .glass {
+    padding: 10px;
+  }
+
+  .glassy-panel {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  /* Ensure text doesn't overflow */
+  h1,
+  h2,
+  h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    background-size: 300% 300%;
+  }
+
+  /* Prevent horizontal scroll on small devices */
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Adjust padding for very small screens */
+  .content-area {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+
+  .text-7xl {
+    font-size: 2.5rem;
+  }
+}
+
+/* Enhanced focus states */
+*:focus-visible {
+  outline: 2px solid rgba(96, 165, 250, 0.5);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
