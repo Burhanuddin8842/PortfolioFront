@@ -21,19 +21,19 @@ const Navbar = () => {
   )
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-[7vh] border-b border-[rgba(255,255,255,0.08)] bg-[#020617]/80 backdrop-blur-[12px] flex items-center px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-[7vh] border-b border-[rgba(255,255,255,0.08)] bg-transparent backdrop-blur-[12px] flex items-center px-4">
       <div className="flex items-center justify-between w-full">
         <div className="flex gap-2 sm:gap-3 items-center">
           <img src="/Me.webp" alt="" className="h-[5vh] w-8 sm:w-10 rounded-full object-cover border border-white/20" />
-          <p className="text-bold text-sm sm:text-lg md:text-2xl text-white font-bold truncate max-w-[120px] sm:max-w-none">Burhanuddin</p>
+          <p className="text-bold text-sm sm:text-lg md:text-2xl text-white font-bold truncate max-w-[120px] sm:max-w-none logo-title">Burhanuddin</p>
         </div>
 
         {/* Desktop links */}
-        <div className="hidden md:flex gap-6 px-5 text-sm sm:text-base">
-          <MenuLink to="#home" className="hover:text-blue-400 transition-colors">Home</MenuLink>
-          <MenuLink to="#about" className="hover:text-blue-400 transition-colors">About</MenuLink>
-          <MenuLink to="#projects" className="hover:text-blue-400 transition-colors">Projects</MenuLink>
-          <MenuLink to="#contact" className="hover:text-blue-400 transition-colors">Contact</MenuLink>
+        <div className="hidden md:flex gap-8 px-5 text-sm font-medium tracking-wide">
+          <MenuLink to="#home" className="hover:text-blue-400 transition-colors duration-200">Home</MenuLink>
+          <MenuLink to="#about" className="hover:text-blue-400 transition-colors duration-200">About</MenuLink>
+          <MenuLink to="#projects" className="hover:text-blue-400 transition-colors duration-200">Projects</MenuLink>
+          <MenuLink to="#contact" className="hover:text-blue-400 transition-colors duration-200">Contact</MenuLink>
         </div>
 
         {/* Mobile hamburger */}

@@ -3,7 +3,7 @@ import React from 'react'
 const Code = () => {
     return (
         <>
-            <div className="flex bg-gray-900 h-full w-full items-start justify-center overflow-auto p-2 sm:p-4">
+            <div className="flex bg-gray-900 h-full w-full items-start justify-center overflow-auto p-2 sm:p-4 font-code">
 
                 <div className="h-full w-full overflow-auto">
                     {/* <code className="h-full w-full"></code> */}

@@ -11,17 +11,17 @@ const Home = () => {
     <div className='text-white min-h-screen px-4 py-6 lg:py-4 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 pt-[7vh]' id='home'>
       <div className="w-full max-w-2xl col-span-1">
         {/* Main Heading with gradient */}
-        <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-          <span className="text-gray-400">Hi, I am</span> <br />
-          <span className="text-3xl sm:text-4xl lg:text-6xl bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent inline-block">
+        <h1 className="text-3xl sm:text-4xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] tracking-tight">
+          <span className="text-gray-400 font-medium">Hi, I am</span> <br />
+          <span className="text-4xl sm:text-5xl lg:text-[4.5rem] xl:text-[5rem] bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent inline-block font-emphasis">
             Burhanuddin.
           </span><br />
-          <span className="text-gray-300">I build </span>
+          <span className="text-gray-200">I build </span>
           <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Full-Stack Solutions</span>
         </h1>
 
-        <p className="text-sm md:text-base text-gray-500 max-w-xl mx-auto md:mx-0 leading-relaxed mt-4">
-          <span className="text-gray-400">Turning complex problems into elegant code.</span> Specializing in the MERN stack to deliver scalable, high-performance web applications.
+        <p className="text-base md:text-lg text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed mt-6 font-light">
+          Turning complex problems into elegant code. Specializing in the MERN stack to deliver scalable, high-performance web applications.
         </p>
 
         {/* CTA Buttons */}

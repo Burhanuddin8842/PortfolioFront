@@ -1,32 +1,48 @@
-/* Google Fonts must be loaded after Tailwind */
+/* Google Fonts - must be first before Tailwind */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Radley:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+
+:root {
+  font-family:
+    "Quicksand",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: inherit;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", "Quicksand", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.logo-title {
+  font-family: "Nunito", "Quicksand", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.font-emphasis {
+  font-family: "Nunito", "Quicksand", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
 
 .background {
-  /* background:
-    radial-gradient(
-      ellipse 60% 50% at 92% 8%,
-      rgba(59, 130, 246, 0.08) 0%,
-      rgba(30, 64, 175, 0.04) 30%,
-      transparent 60%
-    ),
-    #0a1220; */
-  /* background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1e3c72);
-  background-size: 400% 400%;
-  animation: royalFlow 60s ease infinite;
-  min-height: 100vh;
-   */
-
-  /* background: linear-gradient(270deg,
-  #05080f,
-  #0a1224,
-  #0d1b3d,
-  #08122b
-);
-background-size: 400% 400%;
-animation: velvetRoyal 14s ease infinite; */
-
   background:
     radial-gradient(
       circle at 20% 20%,
@@ -46,6 +62,10 @@ animation: velvetRoyal 14s ease infinite; */
   position: relative;
 
   overflow: hidden;
+
+  /* Frosted glass effect */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .background::before {
   content: "";
@@ -67,6 +87,20 @@ animation: velvetRoyal 14s ease infinite; */
   pointer-events: none;
 
   mix-blend-mode: overlay;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes velvetRoyal {
@@ -91,28 +125,31 @@ animation: velvetRoyal 14s ease infinite; */
     background-position: 0% 50%;
   }
 }
-.radley-regular {
-  font-family: "Radley", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.radley-regular-italic {
-  font-family: "Radley", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.comic-relief-regular {
-  font-family: "Comic Relief", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.comic-relief-bold {
-  font-family: "Comic Relief", system-ui;
+/* Modern typography utility classes */
+.font-display {
+  font-family: "Nunito", "Quicksand", system-ui, sans-serif;
   font-weight: 700;
-  font-style: normal;
+  letter-spacing: -0.03em;
+}
+
+.font-body {
+  font-family: "Quicksand", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+.font-medium {
+  font-family: "Quicksand", system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-family: "Quicksand", system-ui, sans-serif;
+  font-weight: 600;
+}
+
+.font-code {
+  font-family: "Fira Code", "Consolas", "Monaco", monospace;
+  font-weight: 400;
 }
 /* .anim {
   animation-name: myAnimation;
